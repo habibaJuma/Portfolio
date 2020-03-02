@@ -1,32 +1,61 @@
 <link rel="stylesheet" href="../styles/app.css">
+<section >
+  <div id="contact-us page">
+    <Info @tittle="Contact-Us" @body="Email us with any question or inquiries or call 0714160318. We would be happy to answer your question and set uo a meeting with you."></Info>
+    <div class="cs-text">
+      <div class="Container">
+        <form {{ action "submit" on="submit"}}>
+          <label for="fname">First Name</label>
+          <input type="text" value={{fname}} id="fname" name="fname" 
+          placeholder="Your name. .">
 
-<Info @tittle="Contact-Us" @body="Email us with any question or inquiries or call 0714160318. We would be happy to answer your question and set uo a meeting with you."></Info>
-<div class="cs-text">
-  <div class="Container">
-    <form {{ action "submit" on="submit"}}>
-      <label for="fname">First Name</label>
-      <input type="text" value={{fname}} id="fname" name="fname" 
-      placeholder="Your name. .">
+          <label for="fnax1xme">Second Name</label>
+          <input type="text" value={{secondname}} id="secondname" name="secondname"                                             
+          placeholder="Your name. .">
 
-      <label for="fnax1xme">Second Name</label>
-      <input type="text" value={{secondname}} id="secondname" name="secondname"                                             
-      placeholder="Your name. .">
+          <label for="country">Country</label>
+          <select value={{country}} id="country" name="country">
+            <option value="uganda">Uganda</option>
+            <option value="kenaya">Kenya</option>
+            <option value="tanzania">Tanzania</option>
+          </select>
 
-      <label for="country">Country</label>
-      <select value={{country}} id="country" name="country">
-        <option value="uganda">Uganda</option>
-        <option value="kenaya">Kenya</option>
-        <option value="tanzania">Tanzania</option>
-      </select>
+          <label for="subject">Subject</label>
+          <textarea value={{subject}} id="subject" name="subject" placeholder="Ask or write anything.." style="height: 200px"></textarea>
 
-      <label for="subject">Subject</label>
-      <textarea value={{subject}} id="subject" name="subject" placeholder="Ask or write anything.." style="height: 200px"></textarea>
-
-      <input type="submit" value="submit" onclick="checkredirect()" value="submit">
-    </form>
+          <input type="submit" value="submit" onclick="checkredirect()" value="submit">
+        </form>
+      </div>
+    </div>
   </div>
+</section>
+<div id="footer">
+  <div class="container">
+	  <div class="row">
+		  <div class="col-lg-4">
+				<h4>My Bunker</h4>
+				  <p>
+						Some Address 57160-00100,<br/>
+						+2547140160, <br/>
+						Kenya, Uganda.
+					</p>
+			</div>
+				
+			<div class="col-lg-4">
+					<h4>SOCIAL</h4>
+					<p>
+						<a href="#">Dribbble</a><br/>
+						<a href="#">Twitter</a><br/>
+						<a href="#">Facebook</a>
+					</p>
+			</div>
+				
+				<div class="col-lg-4">
+					<h4>Habiba Juma</h4>
+					<p>Programming is medicine</p>
+				</div>
+			</div>
+		</div>
 </div>
-
-
 
 {{outlet}}

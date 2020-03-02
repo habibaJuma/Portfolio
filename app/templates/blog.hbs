@@ -1,6 +1,14 @@
-{{model}}
 
+{{#each model as |x|}}
+ <Blog
+  @title= {{x.title}}
+ @image = {{x.image}}
+ @body = {{x.body}}>
 
+{{x.content}}
 
+</Blog>
+
+{{/each}}
 
 {{outlet}}
